@@ -41,6 +41,7 @@ else:
 
 # Application definition
 
+AUTH_USER_MODEL = 'octofit_tracker.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
