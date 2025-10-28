@@ -22,7 +22,7 @@ class Command(BaseCommand):
         Activity.objects.create(user=user2, activity_type='walk', duration=60, calories=200, date=timezone.now().date(), team=team1)
         Activity.objects.create(user=user3, activity_type='cycle', duration=45, calories=300, date=timezone.now().date(), team=team2)
 
-        # リーダーボード作成
+        # Create leaderboards
         Leaderboard.objects.create(team=team1, total_points=450)
         Leaderboard.objects.create(team=team2, total_points=300)
 
