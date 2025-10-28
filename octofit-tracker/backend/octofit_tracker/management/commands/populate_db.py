@@ -17,7 +17,7 @@ class Command(BaseCommand):
         team1.members.set([user1, user2])
         team2.members.set([user3])
 
-        # アクティビティ作成
+        # Create activities
         Activity.objects.create(user=user1, activity_type='run', duration=30, calories=250, date=timezone.now().date(), team=team1)
         Activity.objects.create(user=user2, activity_type='walk', duration=60, calories=200, date=timezone.now().date(), team=team1)
         Activity.objects.create(user=user3, activity_type='cycle', duration=45, calories=300, date=timezone.now().date(), team=team2)
