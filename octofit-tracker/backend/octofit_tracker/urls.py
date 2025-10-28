@@ -33,7 +33,7 @@ import os
 def api_root(request, format=None):
     codespace_name = os.environ.get('CODESPACE_NAME')
     if codespace_name:
-        base_url = f"http://{codespace_name}-8000.app.github.dev/api/"
+        base_url = f"https://{codespace_name}-8000.app.github.dev/api/"
     else:
         # fallback to request.build_absolute_uri for localhost
         base_url = request.build_absolute_uri('/api/')
