@@ -2,7 +2,7 @@ from djongo import models
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
-    # 拡張が必要な場合はここに追加
+    # Add extensions here if needed
     pass
 
 class Team(models.Model):
