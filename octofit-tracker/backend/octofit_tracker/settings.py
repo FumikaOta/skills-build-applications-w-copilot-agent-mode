@@ -108,8 +108,6 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # CORS settings
-import os
-codespace_name = os.environ.get('CODESPACE_NAME')
 if codespace_name:
     CORS_ALLOWED_ORIGINS = [
         f"https://{codespace_name}-8000.app.github.dev",
