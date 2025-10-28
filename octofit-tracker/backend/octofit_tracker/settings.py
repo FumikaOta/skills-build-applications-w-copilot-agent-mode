@@ -108,10 +108,40 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = True
+import os
+codespace_name = os.environ.get('CODESPACE_NAME')
+if codespace_name:
+    CORS_ALLOWED_ORIGINS = [
+        f"https://{codespace_name}-8000.app.github.dev",
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+    ]
+else:
+    CORS_ALLOWED_ORIGINS = [
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+    ]
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_HEADERS = ['*']
-CORS_ALLOW_METHODS = ['*']
+# Only allow necessary headers and methods; adjust as needed for your frontend
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 
 
 # Password validation
