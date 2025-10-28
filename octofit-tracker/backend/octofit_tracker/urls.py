@@ -25,7 +25,7 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'teams', views.TeamViewSet)
 router.register(r'activities', views.ActivityViewSet)
-router.register(r'leaderboards', views.LeaderboardViewSet)
+router.register(r'leaderboard', views.LeaderboardViewSet)
 router.register(r'workouts', views.WorkoutViewSet)
 
 import os
@@ -41,7 +41,7 @@ def api_root(request, format=None):
         'users': f"{base_url}users/",
         'teams': f"{base_url}teams/",
         'activities': f"{base_url}activities/",
-        'leaderboards': f"{base_url}leaderboards/",
+        'leaderboard': f"{base_url}leaderboard/",
         'workouts': f"{base_url}workouts/",
     })
 
