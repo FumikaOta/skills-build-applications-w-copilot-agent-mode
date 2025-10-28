@@ -11,7 +11,7 @@ class Command(BaseCommand):
         user2 = User.objects.create_user(username='bob', email='bob@example.com', password='password')
         user3 = User.objects.create_user(username='carol', email='carol@example.com', password='password')
 
-        # チーム作成
+        # Create teams
         team1 = Team.objects.create(name='Team Alpha')
         team2 = Team.objects.create(name='Team Beta')
         team1.members.set([user1, user2])
