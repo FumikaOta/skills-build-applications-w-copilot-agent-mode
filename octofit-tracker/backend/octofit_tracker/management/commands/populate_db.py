@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = 'Populate the octofit_db database with test data'
 
     def handle(self, *args, **options):
-        # ユーザー作成
+        # Create users
         user1 = User.objects.create_user(username='alice', email='alice@example.com', password='password')
         user2 = User.objects.create_user(username='bob', email='bob@example.com', password='password')
         user3 = User.objects.create_user(username='carol', email='carol@example.com', password='password')
