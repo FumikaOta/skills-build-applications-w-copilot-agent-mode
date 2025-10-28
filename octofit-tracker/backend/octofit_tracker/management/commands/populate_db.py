@@ -26,7 +26,7 @@ class Command(BaseCommand):
         Leaderboard.objects.create(team=team1, total_points=450)
         Leaderboard.objects.create(team=team2, total_points=300)
 
-        # ワークアウト作成
+        # Create workouts
         workout1 = Workout.objects.create(name='Pushups', description='Do 20 pushups')
         workout2 = Workout.objects.create(name='Squats', description='Do 30 squats')
         workout1.suggested_for.set([user1, user3])
